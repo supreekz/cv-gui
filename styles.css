@@ -1,0 +1,127 @@
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    list-style-type: none;
+
+}
+
+li {
+    margin-left: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+/* 1 - ESTILOS PARA HEADER*/ 
+.header {
+    background: url(headerpicture.png);
+    width: 100%;
+    height: 350px;
+    
+}   
+
+/* 1.1 Centralizando o "Guilherme" e o "Programador Web*/
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+
+
+p.central {
+    text-align: center;
+    color: white
+}
+
+
+#capa-background {
+    background-color: blue;
+}
+/* 1.2 - Estilo dos Circulos da minha foto */
+
+#container-circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#circulo {
+    background: white;
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#foto-circulo {
+    width: 240px;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2 - ESTILOS PARA TEXTOS "SOBRE MIM" "EXPERENCIA" "PORTFOLIO */
+
+/*TELAS NORMAIS WEB*/
+
+
+h2.primeiro {
+    color: #AB6F57;
+    font-weight: bold;
+    padding-left: 200px;
+    letter-spacing: 5px;
+    font-size: 30px;
+    margin-top: 150px;
+
+}
+h2 {
+    color: #AB6F57;
+    font-weight: bold;
+    padding-left: 200px;
+    letter-spacing: 5px;
+    font-size: 30px;
+   
+}
+
+.container-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 200px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.colunas {
+    width: 40%;
+}
+
+p.texto {
+    margin: 0;
+}
+/*TELAS MEDIANAS (TABLETS)*/
+
+@media (max-width: 1024px) {
+    .container-text {
+        flex-direction: column;
+        padding: 0 100px;
+        text-align: justify;
+        align-items: center;
+    }
+    
+    h2.primeiro, h2 {
+        padding-left: 0px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .colunas {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
