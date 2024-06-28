@@ -104,6 +104,36 @@ h2 {
 p.texto {
     margin: 0;
 }
+
+/* 3 - ESTILOS PARA "PQ ME CONTRATAR" - COM OS 3 DIVS */
+.container-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.box {
+    width: 30%;
+    height: 300px;
+    padding: 20px;
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.box1 {
+    background-color: #A5694F;
+}
+
+.box2, .box3 {
+    background-color: #D3D3D3;
+}
+
+
 /*TELAS MEDIANAS (TABLETS)*/
 
 @media (max-width: 1024px) {
@@ -123,5 +153,30 @@ p.texto {
     .colunas {
         width: 80%;
         margin-bottom: 20px;
+    }
+}
+
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .container-text {
+        padding: 0 20px;
+        text-align: justify; 
+        align-items: center;
+    }
+    
+    h2 {
+        padding-left: 0; /* Remove o padding left */
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .colunas {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container-text p {
+        font-size: 16px;
     }
 }
