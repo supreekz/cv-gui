@@ -17,7 +17,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    /* overflow-x: hidden; */
+    /* overflow-x: hidden;  */
     
 }
 p {
@@ -66,7 +66,7 @@ nav {
 /* 1 - ESTILOS PARA HEADER*/ 
 .header {
     background: url(pictures/headerpicture.png);
-    width: 100vw;
+    width: 100%;
     height: 350px;
     
 }   
@@ -151,10 +151,13 @@ p.central {
     color: #000;
     transition: background-color 0.3s;
     white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
 }
 
 .resume-button:hover {
-    background-color: #ccc;
+    background-color: #D3D3D3 ;
 }
 /* 2 - ESTILOS PARA TEXTOS "SOBRE MIM" "EXPERENCIA" "PORTFOLIO */
 
@@ -206,17 +209,17 @@ p.texto {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding: 20px;
-    width: 77%;
-    margin: 0 auto;
+    padding: 20px 200px;
+     margin: 0 auto; 
     flex-wrap: wrap;
+    gap: 15px;
 }   
 
 .box {
     flex: 1;
     max-width: 400px;
     min-height: 220px;
-    width: 30%;
+    /* width: 30%; */
     min-width: 250px;
     padding: 20px;
     border-radius: 56px;
@@ -224,7 +227,7 @@ p.texto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin:10px;
+    /* gap: 10px; */
     transition: 0.5 all ease;
 }
 
@@ -236,7 +239,7 @@ p.texto {
     background-color: #D3D3D3;
 }
 
-.box2:hover {
+.box2:hover, .box3:hover{
     background-color: #A5694F;
 }
 
@@ -293,7 +296,7 @@ p.boxstyle {
     line-height: 1.6;
     padding: 20px 200px;
     max-width: 1600px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -369,7 +372,7 @@ footer {
     padding: 40px 0;
     font-family: "Inter", sans-serif;
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: 200;
     letter-spacing: 1px;
     border-top: 10px solid #AB6F57;
     margin-top: 30px;
@@ -380,35 +383,18 @@ p.footer {
     color: black;
     margin-top: -30px;
 }
-/*TELAS MEDIANAS (TABLETS)*/
+
+.parent-container-footer {
+    display: flex;
+    align-items: center;
+    padding-left: 200px;
+}
+
+/* /////////////// DIFERENTS SCREENS \\\\\\\\\\\\\\\\\\\\\ */
+
+/* TABLETS SCREENS - 1024PX */
 
 @media (max-width: 1024px) {
-    .container-text {
-        flex-direction: column;
-        padding: 0 50px;
-        text-align: justify;
-        align-items: center;
-    }
-    
-    h2.primeiro, h2 {
-        padding-left: 0;
-        font-size: 2em;
-        text-align:  center;
-    }
-
-    .colunas {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .container-box {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .box {
-        width: 100%; 
-        margin-bottom: 20px; 
-    }
 
     .section-title {
         font-size: 2em; 
@@ -422,14 +408,86 @@ p.footer {
         align-items: center;
         text-align: center;
     } 
+
+    /* GitHub, Linkedin and "My CV button" - 1024px Screen */
+    .parent-container {
+        padding-right: 0px;
+        justify-content: center;
+        margin-top: 15px;
+    }
     
-    /* Portfolio - 1024px screen */
+    .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 250px;
+        gap: 20px;
+        /* margin: 0 auto; */
+    }
+    
+    .button-cv  {
+        display: flex;
+    
+    }
+    .resume-button {
+        background-color: #AB6F57;
+        border: none;
+        border-radius: 56px;
+        padding: 15px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        transition: background-color 0.3s;
+        white-space: nowrap;
+    }
+    /* "About me" and "My experience" - 1024px Screen */
+
+    .container-text {
+        flex-direction: column;
+        padding: 0 50px;
+        text-align: justify;
+        align-items: center;
+    }
+    
+    h2.primeiro, h2 {
+        padding-left: 0;
+        font-size: 2em;
+        text-align:  center;
+    }
+
+    h2.primeiro {
+        margin-top: 200px; 
+    }
+
+    .colunas {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* The 3 boxes "my things" - 1024px Screen */
+    .container-box {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 50px;
+    }
+
+    .box {
+        /* width: 100%;  */
+        margin-bottom: 20px; 
+         max-width: none;
+         width: 95%;
+
+        /* max-width: 88%; */
+    }
+    
+    /* Portfolio - 1024px Screen */
     .portfolio1-container {
-        padding: 50px; /* Reduzi o padding para telas menores */
+        padding: 50px; 
     }
 
     .portfolio2 img {
-        width: 100%; /* Ajuste para 100% para telas menores */
+        width: 100%;
     }
 
     .portfolio3-boxes {
@@ -437,41 +495,76 @@ p.footer {
     }
 
     .portfolio3-boxes h3 {
-        font-size: 1.5em; /* Ajuste no tamanho da fonte */
+        font-size: 1.5em;
     }
 
     .portfolio3-boxes p, .portfolio3-boxes a {
-        font-size: 1em; /* Ajuste no tamanho da fonte */
+        font-size: 1em; 
     }
     
 
     /* Contact - 1024px screen */
     .contact {
-        padding-left: 50px; /* Reduzindo o padding em telas menores */
+        padding-left: 50px; 
         flex-direction: column; 
-        align-items: flex-start;/* Mudar para coluna */
+        align-items: flex-start;
     }
 
     .contact img {
-        margin-right: 10px; /* Ajustar a margem entre a imagem e o texto */
+        margin-right: 10px; 
     }
 
     .contact p {
-        font-size: 24px; /* Ajustar o tamanho da fonte */
+        font-size: 24px; 
     }
     
+    /* Footer - 1024px Screen */
+  
+    p.footer {
+        padding-left: 50px;
+        margin-top: -30px;
+    }
+    
+    .parent-container-footer {
+        padding-left: 50px;
+    }
 }
 
 /* Estilos para telas pequenas (celulares) */
 @media (max-width: 600px) {
+    
+  
+
+    h1 {
+        word-break: break-word;  
+        text-align: center;      
+        margin-top: 20px;        
+        max-width: 65%;          
+        margin-left: auto;       
+        margin-right: auto;      
+      }
+    
     .container-text {
         padding: 0 20px;
         text-align: justify; 
         align-items: center;
     }
+
+    #circulo {
+        width: 190px;  
+        height: 190px;
+        
+    }
+    
+    #foto-circulo {
+        width: 180px;
+        width: 180px;
+        
+    }
+
     
     h2 {
-        padding-left: 0; /* Remove o padding left */
+        padding-left: 0; 
         font-size: 20px;
         letter-spacing: 2px;
         text-align: center;
@@ -486,17 +579,36 @@ p.footer {
         font-size: 16px;
     }
     nav {
-        padding: 10px 20px 10px 0; /* Reduzindo o padding em telas menores */
+        padding: 10px 20px 10px 0; 
     }
 
-    .list {
-        flex-direction: wrap;
-        align-items: center;
+
+    .list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding-top: 12px;
     }
+
     .contact {
         padding-left: 20px;
         display: flex;
         align-items: center;
+    }
+
+    /* Diferential - 600px screen */
+    
+    .container-box {
+        padding: 20px;
+    }
+
+    .box {
+        /* width: 100%;  */
+        margin-bottom: 20px; 
+         max-width: 88%;
+         width: none;
+
+        /* max-width: 88%; */
     }
 
     /*Portfolio - 600px screen */
@@ -528,10 +640,24 @@ p.footer {
     }
 
     .contact img {
-        margin-right: 10px; /* Ajustar a margem entre a imagem e o texto */
+        margin-right: 10px;
+        height: 35px;
+        width: 35px; /* Ajustar a margem entre a imagem e o texto */
     }
 
     .contact p {
-        font-size: 20px; /* Ajustar o tamanho da fonte */
+        font-size: 15px; /* Ajustar o tamanho da fonte */
     }
+
+    /* Footer - 600px Screen */
+    p.footer {
+        padding-left: 20px;
+        margin-top: -30px;
+        font-size: 18px;
+    }
+    
+    .parent-container-footer {
+        padding-left: 20px;
+    }
+
 }
