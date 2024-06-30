@@ -285,6 +285,7 @@ p.boxstyle {
     align-items: center;
     background: white;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .portfolio3-boxes {
@@ -297,6 +298,8 @@ p.boxstyle {
     width: 50%;
     height: auto;
     object-fit: cover;
+    /* min-height: 300px;
+    border-radius: 60px */
 }
 
 .portfolio3-boxes h3 {
@@ -363,36 +366,36 @@ p.footer {
 @media (max-width: 1024px) {
     .container-text {
         flex-direction: column;
-        padding: 0 100px;
+        padding: 0 50px;
         text-align: justify;
         align-items: center;
     }
     
     h2.primeiro, h2 {
-        padding-left: 0px;
-        font-size: 25px;
-        text-align: center;
+        padding-left: 0;
+        font-size: 2em;
+        text-align:  center;
     }
 
     .colunas {
-        width: 80%;
+        width: 100%;
         margin-bottom: 20px;
     }
     .container-box {
-        flex-direction: column; /* Alinhar boxes verticalmente */
-        align-items: center; /* Centralizar itens */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .box {
-        width: 80%; /* Ajustar largura dos boxes */
-        margin-bottom: 20px; /* Ajuste de margens */
+        width: 100%; 
+        margin-bottom: 20px; 
     }
 
     .section-title {
-        font-size: 2em; /* Ajustar tamanho da fonte do título */
+        font-size: 2em; 
     }
      nav {
-        padding: 50px;
+        padding: 20px;
 
     }
     .list {
@@ -400,6 +403,44 @@ p.footer {
         align-items: center;
         text-align: center;
     } 
+    
+    /* Portfolio - 1024px screen */
+    .portfolio1-container {
+        padding: 50px; /* Reduzi o padding para telas menores */
+    }
+
+    .portfolio2 img {
+        width: 100%; /* Ajuste para 100% para telas menores */
+    }
+
+    .portfolio3-boxes {
+        padding: 10px 0;
+    }
+
+    .portfolio3-boxes h3 {
+        font-size: 1.5em; /* Ajuste no tamanho da fonte */
+    }
+
+    .portfolio3-boxes p, .portfolio3-boxes a {
+        font-size: 1em; /* Ajuste no tamanho da fonte */
+    }
+    
+
+    /* Contact - 1024px screen */
+    .contact {
+        padding-left: 50px; /* Reduzindo o padding em telas menores */
+        flex-direction: column; 
+        align-items: flex-start;/* Mudar para coluna */
+    }
+
+    .contact img {
+        margin-right: 10px; /* Ajustar a margem entre a imagem e o texto */
+    }
+
+    .contact p {
+        font-size: 24px; /* Ajustar o tamanho da fonte */
+    }
+    
 }
 
 /* Estilos para telas pequenas (celulares) */
@@ -437,5 +478,41 @@ p.footer {
         padding-left: 20px;
         display: flex;
         align-items: center;
+    }
+
+    /*Portfolio - 600px screen */
+    .portfolio1-container {
+        padding: 20px; /* Reduzi o padding para telas menores */
+    }
+
+    .portfolio2 img {
+        width: 100%; /* Ajuste para 100% para telas menores */
+    }
+
+    .portfolio3-boxes {
+        padding: 10px 0;
+    }
+
+    .portfolio3-boxes h3 {
+        font-size: 1.5em; /* Ajuste no tamanho da fonte */
+    }
+
+    .portfolio3-boxes p, .portfolio3-boxes a {
+        font-size: 1em; /* Ajuste no tamanho da fonte */
+    }
+
+    /* Contact - 600px screen */
+    .contact {
+        padding-left: 20px; /* Reduzindo o padding em telas menores */
+        flex-direction: column; /* Mudar para coluna */
+        align-items: flex-start; /* Alinhar ao início */
+    }
+
+    .contact img {
+        margin-right: 10px; /* Ajustar a margem entre a imagem e o texto */
+    }
+
+    .contact p {
+        font-size: 20px; /* Ajustar o tamanho da fonte */
     }
 }
