@@ -229,20 +229,28 @@ p.texto {
     justify-content: space-between;
     /* gap: 10px; */
     transition: 0.5 all ease;
+    /* cursor: pointer;  */
+
 }
 
-.box1 {
-    background-color: #A5694F;
-}
-
-.box2, .box3 {
+.box1, .box2, .box3 {
     background-color: #D3D3D3;
 }
 
 .box2:hover, .box3:hover{
     background-color: #A5694F;
 }
+.selected { /* Nova classe para caixa selecionada */
+    background-color: #A5694F;
+}
 
+.boxstyle { /* Nova classe para estilização do conteúdo */
+    display: none;
+}
+
+.selected .boxstyle { /* Exibir conteúdo da caixa selecionada */
+    display: block;
+}
 
 
 /* 3.2: Ajustando o texto (h3 - numero, h4 - nome, p - texto) */
@@ -466,21 +474,21 @@ p.footer {
     }
 
     /* The 3 boxes "my things" - 1024px Screen */
-    .container-box {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 50px;
-    }
+        .container-box {
+            flex-direction: column; 
+            align-items: center; 
+            padding: 50px;
+        }
 
-    .box {
-        /* width: 100%;  */
-        margin-bottom: 20px; 
-         max-width: none;
-         width: 95%;
+        .box {
+            /* width: 100%;  */
+            margin-bottom: 20px; 
+            max-width: none;
+            width: 95%;
 
-        /* max-width: 88%; */
-    }
-    
+            /* max-width: 88%; */
+        }
+        
     /* Portfolio - 1024px Screen */
     .portfolio1-container {
         padding: 50px; 
